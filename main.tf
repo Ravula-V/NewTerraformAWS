@@ -12,6 +12,9 @@
          }
        }
      }
+provider "aws" {          
+          region  = "us-west-2"
+          }
 
      # An example resource that does nothing.
      resource "aws_instance" "app_server" {

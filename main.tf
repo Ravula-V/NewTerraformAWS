@@ -4,8 +4,7 @@
     terraform {
        backend "remote" {
          # The name of your Terraform Cloud organization.
-         organization = "icmpcdktest
-"
+         organization = "icmpcdktest"
 
          # The name of the Terraform Cloud workspace to store Terraform state files in.
          workspaces {
@@ -20,6 +19,6 @@
           instance_type = "t2.micro"
 
           tags = {
-            Name = "ExampleTerraformGITSNOW-Instance"
+            Name = "ExampleTerraformGITSNOW-InstanceByVenky"
            }
         }

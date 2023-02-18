@@ -1,17 +1,24 @@
 
 
-# The configuration for the `remote` backend.
-    terraform {
-       backend "remote" {
-         # The name of your Terraform Cloud organization.
-         organization = "icmpcdktest"
+terraform {
 
-         # The name of the Terraform Cloud workspace to store Terraform state files in.
-         workspaces {
-           name = "iCMP"
-         }
-       }
-     }
+  cloud {
+    organization = "icmpcdktest"
+
+    workspaces {
+      name = "iCMP"
+    }
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.28.0"
+    }
+  }
+
+  required_version = ">= 0.11.0"
+}
 provider "aws" {          
           region  = "us-west-2"
           }
